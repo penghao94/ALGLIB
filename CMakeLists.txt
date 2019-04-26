@@ -24,7 +24,7 @@ endif()
 
 aux_source_directory(src/ SOURCES_LIST)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/shared/)
-add_library(${TARGET_NAME} SHARED ${SOURCES_LIST})
+add_library(${TARGET_NAME} ${SOURCES_LIST})
 set_target_properties(${TARGET_NAME} PROPERTIES VERSION "${ALGLIB_VERSION_MAJOR}.${ALGLIB_VERSION_MINOR}.${ALGLIB_VERSION_PATCH}")
 
 # Generate pkg-config file
